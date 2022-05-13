@@ -196,6 +196,40 @@
             </objects>
             <point key="canvasLocation" x="2370" y="-1169"/>
         </scene>
+        <!--Main View Controller-->
+        <scene sceneID="ZZn-aC-nRY">
+            <objects>
+                <viewController id="jKq-R4-zAe" customClass="MainViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NrM-kY-vV7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="PageContainer" translatesAutoresizingMaskIntoConstraints="NO" id="RJk-Vt-RNh">
+                                <rect key="frame" x="20" y="44" width="374" height="783"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="e6o-Zo-VJ0" kind="embed" id="FLX-hI-9Cr"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGz-U9-2jg">
+                                <rect key="frame" x="43" y="835" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IRj-dN-o0Q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="ContainerView" destination="RJk-Vt-RNh" id="JP0-3R-95X"/>
+                        <segue destination="bAI-UH-YT0" kind="custom" identifier="StudentListSeque" customClass="Segue" customModule="StudentApp" customModuleProvider="target" id="m7L-4S-oq8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zXE-l0-Lbu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-807" y="-1130"/>
+        </scene>
         <!--Students-->
         <scene sceneID="sd1-6L-5MN">
             <objects>
@@ -212,6 +246,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHA-m5-5ww" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="616" y="-1169"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bV5-HQ-woX">
+            <objects>
+                <viewController id="e6o-Zo-VJ0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H1x-Wy-fv7">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XjK-td-GsK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Et5-PZ-7St" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-117" y="-1635"/>
         </scene>
     </scenes>
     <resources>

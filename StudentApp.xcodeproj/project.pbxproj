@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84048328282EA4920050410F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84048327282EA4920050410F /* MainViewController.swift */; };
+		8404832A282EC7A80050410F /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84048329282EC7A70050410F /* Segue.swift */; };
 		9413D98D282BF0AC00A31403 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9413D98C282BF0AC00A31403 /* Model.swift */; };
 		9413D990282BF2D100A31403 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9413D98E282BF2D100A31403 /* DataModel.xcdatamodeld */; };
 		9413D9BE282C06AC00A31403 /* StudentDao+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9413D9BC282C06AC00A31403 /* StudentDao+CoreDataClass.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84048327282EA4920050410F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		84048329282EC7A70050410F /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		9413D98C282BF0AC00A31403 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9413D98F282BF2D100A31403 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		9413D9BC282C06AC00A31403 /* StudentDao+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudentDao+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -78,7 +82,9 @@
 				CE52A24027FDCA1100C737CE /* AppDelegate.swift */,
 				CE52A24227FDCA1100C737CE /* SceneDelegate.swift */,
 				CE52A24427FDCA1100C737CE /* ViewController.swift */,
+				84048329282EC7A70050410F /* Segue.swift */,
 				CE52A24627FDCA1100C737CE /* Main.storyboard */,
+				84048327282EA4920050410F /* MainViewController.swift */,
 				CE52A24927FDCA1200C737CE /* Assets.xcassets */,
 				CE52A24B27FDCA1200C737CE /* LaunchScreen.storyboard */,
 				CE52A24E27FDCA1200C737CE /* Info.plist */,
@@ -174,9 +180,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE52A24527FDCA1100C737CE /* ViewController.swift in Sources */,
+				84048328282EA4920050410F /* MainViewController.swift in Sources */,
 				CE52A25727FDDE4D00C737CE /* StudentTableViewCell.swift in Sources */,
 				CE52A24127FDCA1100C737CE /* AppDelegate.swift in Sources */,
 				9413D9C1282C06D200A31403 /* Student.swift in Sources */,
+				8404832A282EC7A80050410F /* Segue.swift in Sources */,
 				CE52A24327FDCA1100C737CE /* SceneDelegate.swift in Sources */,
 				CE52A25527FDD24C00C737CE /* StudentsTableViewController.swift in Sources */,
 				9413D990282BF2D100A31403 /* DataModel.xcdatamodeld in Sources */,
