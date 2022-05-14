@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bAI-UH-YT0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jKq-R4-zAe">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -137,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5Z-LH-MXH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2369.5652173913045" y="-1841.5178571428571"/>
+            <point key="canvasLocation" x="-80" y="-1724"/>
         </scene>
         <!--Student-->
         <scene sceneID="But-tF-Sk2">
@@ -204,31 +204,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="PageContainer" translatesAutoresizingMaskIntoConstraints="NO" id="RJk-Vt-RNh">
-                                <rect key="frame" x="20" y="44" width="374" height="783"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="e6o-Zo-VJ0" kind="embed" id="FLX-hI-9Cr"/>
-                                </connections>
-                            </containerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGz-U9-2jg">
-                                <rect key="frame" x="43" y="835" width="67" height="31"/>
+                                <rect key="frame" x="54" y="840" width="66" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="homekit" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                    </preferredSymbolConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="bAI-UH-YT0" kind="custom" identifier="StudentListSegue" customClass="Segue" customModule="StudentApp" customModuleProvider="target" id="UqH-hv-EvT"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s0p-gR-e6n">
+                                <rect key="frame" x="20" y="44" width="374" height="783"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rs9-fB-pJC">
+                                <rect key="frame" x="183" y="835" width="49" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemPurpleColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    </preferredSymbolConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="HkU-vh-pns" kind="custom" identifier="addStudentSegue" customClass="Segue" customModule="StudentApp" customModuleProvider="target" id="Gaa-Ht-0r7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IRj-dN-o0Q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="ContainerView" destination="RJk-Vt-RNh" id="JP0-3R-95X"/>
-                        <segue destination="bAI-UH-YT0" kind="custom" identifier="StudentListSeque" customClass="Segue" customModule="StudentApp" customModuleProvider="target" id="m7L-4S-oq8"/>
+                        <outlet property="containerView" destination="s0p-gR-e6n" id="OqE-i2-ZiK"/>
+                        <outlet property="newStudnetBtn" destination="rs9-fB-pJC" id="djk-Dp-Hr9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXE-l0-Lbu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-807" y="-1130"/>
+            <point key="canvasLocation" x="-1371.0144927536232" y="-1389.5089285714284"/>
         </scene>
         <!--Students-->
         <scene sceneID="sd1-6L-5MN">
@@ -247,27 +266,20 @@
             </objects>
             <point key="canvasLocation" x="616" y="-1169"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="bV5-HQ-woX">
-            <objects>
-                <viewController id="e6o-Zo-VJ0" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="H1x-Wy-fv7">
-                        <rect key="frame" x="0.0" y="0.0" width="374" height="783"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="XjK-td-GsK"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Et5-PZ-7St" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-117" y="-1635"/>
-        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0uY-gv-EXj"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="avatar" width="100" height="100"/>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="studentdesk" catalog="system" width="124" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

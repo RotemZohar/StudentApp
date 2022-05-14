@@ -9,10 +9,12 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    @IBOutlet weak var ContainerView: UIView!
+    @IBOutlet weak var containerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        performSegue(withIdentifier: "StudentListSegue", sender: self)
 
         // Do any additional setup after loading the view.
     }
