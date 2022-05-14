@@ -242,7 +242,6 @@
                     </view>
                     <connections>
                         <outlet property="containerView" destination="s0p-gR-e6n" id="OqE-i2-ZiK"/>
-                        <outlet property="newStudnetBtn" destination="rs9-fB-pJC" id="djk-Dp-Hr9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXE-l0-Lbu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -268,7 +267,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0uY-gv-EXj"/>
+        <segue reference="Gaa-Ht-0r7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="avatar" width="100" height="100"/>
