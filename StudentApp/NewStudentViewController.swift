@@ -10,6 +10,7 @@ import UIKit
 class NewStudentViewController: UIViewController {
 
 
+    @IBOutlet weak var addressTv: UITextField!
     @IBOutlet weak var phoneTv: UITextField!
     @IBOutlet weak var nameTv: UITextField!
     @IBOutlet weak var idTv: UITextField!
@@ -19,12 +20,22 @@ class NewStudentViewController: UIViewController {
 
     }
     
+    @IBAction func cacnel(_ sender: Any) {
+        if(self.navigationController != nil)
+        {self.navigationController?.popViewController(animated: true)}
+    }
+    
     @IBAction func save(_ sender: Any) {
         let student = Student()
         student.id = idTv.text
         student.name = nameTv.text
+        student.address = addressTv.text
+        student.phone = phoneTv.text
+        
         Model.instance.add(student: student)
-        self.navigationController?.popViewController(animated: true)
+        if(self.navigationController != nil)
+        {self.navigationController?.popViewController(animated: true)}
+        
     }
     
     

@@ -19,6 +19,7 @@ extension StudentDao {
     @NSManaged public var id: String?
     @NSManaged public var name: String?
     @NSManaged public var phone: String?
+    @NSManaged public var address: String?
     @NSManaged public var avatarUrl: String?
 
 }

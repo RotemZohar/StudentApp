@@ -11,6 +11,7 @@ class Student{
     public var id: String?
     public var name: String?
     public var phone: String?
+    public var address: String?
     public var avatarUrl: String?
     
     init(){}
@@ -20,7 +21,7 @@ class Student{
         name = student.name
         phone = student.phone
         avatarUrl = student.avatarUrl
-        
+        address = student.address
     }
     
 }

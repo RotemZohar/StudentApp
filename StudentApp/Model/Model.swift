@@ -49,6 +49,7 @@ class Model{
         st.name = student.name
         st.phone = student.phone
         st.avatarUrl = student.avatarUrl
+        st.address = student.address
         
         do{
             try context.save()
