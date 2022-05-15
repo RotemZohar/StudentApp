@@ -17,13 +17,10 @@ class Segue: UIStoryboardSegue {
         
         if (source is MainViewController) {
             view = source as! MainViewController
-        } else {
+        } else if (source.parent is MainViewController){
             view = source.parent as! MainViewController
-        }
-        
-        if (view.children.count > 0 && view.containerView.subviews.count > 0) {
-            view.children[0].removeFromParent()
-            view.containerView.subviews[0].removeFromSuperview()
+        } else {
+            return;
         }
         
         view.addChild(self.destination)
