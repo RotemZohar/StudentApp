@@ -87,7 +87,6 @@ class Model{
         }
         
         let fetchReq = StudentDao.fetchRequest()
-//        fetchReq.predicate = NSPredicate.init(format: "id == \(student.id)")
 
         do{
             let studentsDao = try context.fetch(fetchReq)
