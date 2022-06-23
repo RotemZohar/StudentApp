@@ -32,6 +32,11 @@ class Model{
     private init(){
        
     }
+    
+    // Notification center
+    static let studentDataNotification = ModelNotificatiponBase("com.menachi.studentDataNotification")
+    
+    
     static let instance = Model()
     lazy var context:NSManagedObjectContext? = { () -> NSManagedObjectContext? in
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
@@ -75,6 +80,7 @@ class Model{
         }catch let error as NSError{
             print("student add error \(error) \(error.userInfo)")
         }
+        Model.studentDataNotification.post()
     }
     
     func getStudent(byId:String)->Student?{
