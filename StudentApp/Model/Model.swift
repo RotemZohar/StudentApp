@@ -114,7 +114,7 @@ class Model{
         } catch {
             print("Error in saving delete")
         }
-        
+        Model.studentDataNotification.post()
         
     }
     

@@ -13,9 +13,13 @@ class StudentsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Model.studentDataNotification.observe {
+            self.reload()
+        }
+        reload()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    func reload(){
         data = Model.instance.getAllStudents()
         self.tableView.reloadData()
     }
