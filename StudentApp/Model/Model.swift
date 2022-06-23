@@ -9,6 +9,25 @@ import Foundation
 import UIKit
 import CoreData
 
+class ModelNotificatiponBase{
+    let name:String
+    init(_ name:String){
+        self.name=name
+    }
+    func observe(callback:@escaping ()->Void){
+        NotificationCenter.default.addObserver(forName: Notification.Name(name), object: nil, queue: nil){ data in
+            NSLog("got notify")
+            callback()
+        }
+    }
+    
+    func post(){
+        NSLog("post notify")
+        NotificationCenter.default.post(name: Notification.Name(name), object: self)
+    }
+
+}
+
 class Model{
     private init(){
        
@@ -63,6 +82,61 @@ class Model{
     }
     
     func delete(student:Student){
+        guard let context = context else {
+            return
+        }
+        
+        let fetchReq = StudentDao.fetchRequest()
+//        fetchReq.predicate = NSPredicate.init(format: "id == \(student.id)")
+
+        do{
+            let studentsDao = try context.fetch(fetchReq)
+            for stDao in studentsDao{
+                if(student.id == stDao.id)
+                {
+                    context.delete(stDao)
+                    
+                }
+            }
+            
+        }catch let error as NSError{
+            print("student fetch error \(error) \(error.userInfo)")
+
+        }
+        
+        do{
+            try context.save()
+        } catch {
+            print("Error in saving delete")
+        }
+        
+        
+    }
+    
+    func update(student:Student){
+        guard let context = context else {
+            return
+        }
+        
+        let fetchReq = StudentDao.fetchRequest()
+        fetchReq.predicate = NSPredicate.init(format: "id == \(student.id)")
+
+        do{
+            let studentsDao = try context.fetch(fetchReq)
+            for stDao in studentsDao{
+//                context.updatedObjects({})
+            }
+            
+        }catch let error as NSError{
+            print("student fetch error \(error) \(error.userInfo)")
+
+        }
+        
+        do{
+            try context.save()
+        } catch {
+            print("Error in saving delete")
+        }
         
     }
 }

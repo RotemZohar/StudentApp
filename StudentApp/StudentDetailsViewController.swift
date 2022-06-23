@@ -37,7 +37,17 @@ class StudentDetailsViewController: UIViewController {
         }
     }
     
-
+    
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBAction func onDelete(_ sender: Any) {
+        if(student != nil)
+        {
+            Model.instance.delete(student:student!)
+        }
+        if(self.navigationController != nil)
+        {self.navigationController?.popViewController(animated: true)}
+        
+    }
     /*
     // MARK: - Navigation
 
